@@ -10,21 +10,25 @@
                                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>Normal text</a></li>" +
                                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>Heading 1</a></li>" +
                                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>Heading 2</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3'>Heading 3</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h4'>Heading 4</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h5'>Heading 5</a></li>" +
+                               "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='blockquote'>Blockquote</a></li>" +
                            "</ul>" +
                        "</li>",
         "emphasis":    "<li>" +
                            "<div class='btn-group'>" +
                                "<a class='btn' data-wysihtml5-command='bold' title='CTRL+B'>Bold</a>" +
                                "<a class='btn' data-wysihtml5-command='italic' title='CTRL+I'>Italic</a>" +
-                               "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>" +
+                               // "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>" +
                            "</div>" +
                        "</li>",
         "lists":       "<li>" +
                            "<div class='btn-group'>" +
                                "<a class='btn' data-wysihtml5-command='insertUnorderedList' title='Unordered List'><i class='icon-list'></i></a>" +
                                "<a class='btn' data-wysihtml5-command='insertOrderedList' title='Ordered List'><i class='icon-th-list'></i></a>" +
-                               "<a class='btn' data-wysihtml5-command='Outdent' title='Outdent'><i class='icon-indent-right'></i></a>" +
-                               "<a class='btn' data-wysihtml5-command='Indent' title='Indent'><i class='icon-indent-left'></i></a>" +
+                               // "<a class='btn' data-wysihtml5-command='Outdent' title='Outdent'><i class='icon-indent-right'></i></a>" +
+                               // "<a class='btn' data-wysihtml5-command='Indent' title='Indent'><i class='icon-indent-left'></i></a>" +
                            "</div>" +
                        "</li>",
         "link":        "<li>" +
@@ -72,7 +76,7 @@
         "font-styles": true,
         "emphasis": true,
         "lists": true,
-        "html": false,
+        "html": true,
         "link": true,
         "image": true,
         events: {},
@@ -86,6 +90,9 @@
                 "li": {},
                 "h1": {},
                 "h2": {},
+								"h3": {},
+								"h4": {},
+								"h5": {},
                 "blockquote": {},
                 "u": 1,
                 "img": {
