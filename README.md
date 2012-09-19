@@ -1,36 +1,30 @@
-# Bootstrap Wysihtml5 for Rails
+# TKH Inline Editor
 
-Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.
-It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+A simple, good inline HTML editor for Rails apps running Twitter Bootstrap.
 
-http://twitter.github.com/bootstrap/
+History
 
-Bootstrap Wysihtml5 is a plugin for Bootstrap designed by James Hollingworth. It provides a stylish wysiwyg editor for Bootstrap.
+I looked long and hard to find a very simple inline HTML editor enabling me to allow very few options but to easily add the tags/sections I really want. While building the tkh_cms gem suite my philosophy has been, whenever possible, to prefer my own imperfect and poorly tested gems which I understand fully rather that top class gems which I don't understand and which I can't hack at will. Unfortunately I don't have yet the chops to create my own editor yet so I had to do some research.
 
-https://github.com/jhollingworth/bootstrap-wysihtml5
+The one that fit my needs best was wysihtml5. Since I use twitter bootstrap in most of my projects I then looked at bootstrap-wysihtml5. Since my tkh_cms gem suite is built for Rails 3.2 and later, with its assets pipeline, I then looked at bootstrap-wysihtml5-rails. This one is wonderful but I still can't figure out how to build the toolbar exactly the way I want without touching the hard-coded sections.
 
-bootstrap-wysihtml5-rails project integrates it with Rails 3 assets pipeline.
+I therefore cloned that latter gem and customized it to my exact needs.
 
-https://github.com/Nerian/bootstrap-wysihtml5-rails
+Primarily developed and customized for Ten Thousand Hours but we are happy to share if anybody finds it useful. It's meant primarily to be used with the tkh_cms gem suite but over time we want it to be used individually as well. The latter implementation will be accelerated if some issues and pull requests come in, denoting some interest out there.
 
 
-## Rails > 3.1
-Include bootstrap-wysihtml5-rails in Gemfile;
+## Installation
 
-``` ruby
-gem 'bootstrap-wysihtml5-rails'
-```
+Add this line to your application's Gemfile:
 
-or you can install from latest build;
+    gem 'tkh_inline_editor', '~> 0.0'
 
-``` ruby
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
-```
+Add it to your bundle:
 
-and run bundle install.
+    $ bundle
 
-This gem doesn't include Bootstrap. You can get Bootstrap here: https://github.com/anjlab/bootstrap-rails 
+Bootstrap is not included, you need to add this yourself.
+
 
 ## Configuration
 
@@ -72,9 +66,15 @@ Just call wysihtml5() with any selector.
 </script>
 ```
 
-## License
-Copyright (c) 2011 Gonzalo Rodríguez-Baltanás Díaz
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## Contributing
+
+Pull requests for new features and bug fixes are welcome.
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Create your failing tests based on the Test Unit framework.
+4. Create your code which makes the tests pass.
+5. Commit your changes (`git commit -am 'Added some feature'`)
+6. Push to the branch (`git push origin my-new-feature`)
+7. Create new Pull Request

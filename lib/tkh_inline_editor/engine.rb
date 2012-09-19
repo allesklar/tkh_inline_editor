@@ -1,4 +1,4 @@
-module BootstrapWysihtml5Rails
+module TkhInlineEditor
   module Rails
     class Engine < ::Rails::Engine
     end
