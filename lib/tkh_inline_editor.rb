@@ -1,5 +1,4 @@
 require "rails"
-require "tkh_inline_editor"
 require "tkh_inline_editor/version"
 
 module TkhInlineEditor
