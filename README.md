@@ -8,7 +8,7 @@ I looked long and hard to find a very simple inline HTML editor enabling me to a
 
 The one that fit my needs best was wysihtml5. Since I use twitter bootstrap in most of my projects I then looked at bootstrap-wysihtml5. Since my tkh_cms gem suite is built for Rails 3.2 and later, with its assets pipeline, I then looked at bootstrap-wysihtml5-rails. This one is wonderful but I still can't figure out how to build the toolbar exactly the way I want without touching the hard-coded sections.
 
-I therefore cloned that latter gem and customized it to my exact needs.
+I therefore cloned that latter gem and customized it to my exact needs. It would have been easier to just run a specific branch of the existing gem off github but unfortunately I need to incorporate the editor in my own gems and it's therefore impossible.
 
 Primarily developed and customized for Ten Thousand Hours but we are happy to share if anybody finds it useful. It's meant primarily to be used with the tkh_cms gem suite but over time we want it to be used individually as well. The latter implementation will be accelerated if some issues and pull requests come in, denoting some interest out there.
 

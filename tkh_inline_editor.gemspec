@@ -6,7 +6,7 @@ require "tkh_inline_editor/version"
 # Describe your gem and declare its dependencies
 Gem::Specification.new do |s|
   s.name        = "tkh_inline_editor"
-  s.version     = TkhInline_Editor::VERSION
+  s.version     = TkhInlineEditor::VERSION
   s.authors     = ["Swami Atma"]
   s.email       = ["swami@TenThousandHours.eu"]
   s.homepage    = "https://github.com/allesklar/tkh_inline_editor"
@@ -15,6 +15,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md", "CHANGELOG.md"]
   s.test_files = Dir["test/**/*"]
-
+  
+  s.add_dependency "railties", ">= 3.0"
+  s.add_development_dependency "bundler", ">= 1.0"
   s.add_development_dependency "rake"
 end
